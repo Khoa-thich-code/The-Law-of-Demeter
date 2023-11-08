@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class GunUI : MonoBehaviour
 {
-    public void RedrawUI(Gun gun)
+    public void RedrawUI()
     {
-        print(gun.GetRoundLeft());
+        Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        print(player.gun.ammo.roundsLeft);
     }
 }
